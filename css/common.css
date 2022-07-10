@@ -1,0 +1,33 @@
+@import "//at.alicdn.com/t/font_3341354_4oum48bgo9.css";
+
+body,
+td,
+th {
+    font: 12px Helvetica, Arial, sans-serif;
+    line-height: 1.62;
+}
+
+html {
+    color: #111;
+    background: #fff;
+}
+
+
+.container {
+    margin: 0 auto;
+}
+.clearfix::after{
+    content:'';
+    display:block;
+    clear:both;
+}
+
+.hidden{
+    display:none
+}
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}

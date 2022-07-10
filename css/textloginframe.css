@@ -1,0 +1,342 @@
+@import "reset.css";
+@import "common.css";
+
+.container {
+    height: 300px;
+    width: 300px;
+    min-height: 200px;
+    max-width: 300px;
+    padding: 30px 10px 10px;
+    overflow: hidden;
+    font-size: 12px;
+    box-sizing: border-box;
+    position: relative;
+    background-color:#edf4ed;
+}
+
+a {
+    color: #41ac52;
+}
+
+/* input-style 统一样式*/
+input[type="text"],
+input[type="password"] {
+    border: 1px solid #E4E6E5;
+    height: 34px;
+    width: 100%;
+    padding: 8px 0 8px 10px;
+    color: #000;
+    font-size: 13px;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: rgb(117, 117, 117);
+}
+
+/* switch-menu 选择菜单 */
+.login .switch-menu {
+    border-bottom: 1px solid #ECECEC;
+    margin-bottom: 10px;
+}
+
+.login .switch-menu .left,
+.login .switch-menu .right {
+    width: 50%;
+    text-align: center;
+    color: #9B9B9B;
+}
+
+.login .switch-menu .selected {
+    color: #333;
+    font-weight: 600;
+    border-bottom: 1px solid #494949;
+}
+
+/* 协议 account-tips*/
+.form .account-tips {
+    color: #9B9B9B;
+    font-size: 12px;
+}
+
+
+/* 手机号及地区文本框 country-code*/
+.form .form-item {
+    position: relative;
+    margin: 10px 0;
+}
+
+.form .form-item .right {
+    padding-left: 60px;
+}
+
+.form .form-item .country-code {
+    width: 51px;
+    height: 26px;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    border-right: 1px solid #e4e6e5;
+    color: #333;
+    font-weight: bold;
+    line-height: 26px;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+/* 手机号码选地区 choose-area */
+/* 添加蒙层 */
+.country-code .choose-area{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:rgba(255,255,255,.7);
+    z-index:10;
+    left:0;
+    top:0;
+}
+
+.country-code .choose-area .center{
+    max-width:300px;
+    max-height:210px;
+    box-sizing:border-box;
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+    border:8px solid rgba(102,102,102,.4);
+    border-radius:5px;
+    background-color:#fff;
+    overflow:hidden;
+}
+/* .choose-area .center::after{
+    content:'';
+    display:block;
+    height:5px;
+    width:95%;
+    background:#fff;
+    position:absolute;
+    bottom:0;
+} */
+.country-code .choose-area .center .title{
+    padding:10px 10px 6px;
+    background-color:#ebf5eb;
+    font-size:14px;
+}
+.country-code .choose-area .center .title .left{
+    font-weight:700;
+    color:#060;
+    font-size:16.38px;
+    padding-left:4px;
+}
+.country-code .choose-area .center .title .right{
+    color:#b4b4b4;
+    font-size:11px;
+    position:absolute;
+    top:5px;
+    right:10px;
+    padding:0 3px;
+}
+.choose-area .choose-area-ul{
+    height:180px;
+    box-sizing:border-box;
+    padding:15px;
+    max-height:150px;
+    font-size:12px;
+    overflow:auto;
+    position:relative;
+    
+}
+.choose-area .choose-area-ul li{
+    border-top:1px solid #e5e5e5;
+    line-height:2.6;
+    color:#494949;
+    cursor:pointer;
+}
+.choose-area .choose-area-ul li:last-child{
+    border-bottom:1px solid #ccc;
+    /* margin-bottom:20px; */
+}
+.choose-area .choose-area-ul li .left{
+    font-size:14px;
+}
+.choose-area .choose-area-ul li .right{
+    font-size:14px;
+    color:#aaa;
+    font-weight:normal;
+}
+.choose-area .choose-area-ul li .left{
+    margin-left:10px;
+}
+.choose-area .choose-area-ul .selected{
+    color:#42bd56;
+}
+
+/* 验证码文本框 */
+.form .form-item input+a {
+    position: absolute;
+    top: 8px;
+    right: 7px;
+}
+
+/* 登录按钮  btn-logo*/
+.form .form-item .btn-logo {
+    font-size: 15px;
+    background-color: #41ac52;
+    width: 100%;
+    height: 34px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 34px;
+}
+
+/* 提示tip */
+.form .form-item.tip {
+    color: #333;
+    height: 24px;
+    line-height: 24px;
+}
+
+/* 底部bottom */
+.bottom {
+    border-top: 1px solid #ddd;
+
+}
+
+.bottom .msg {
+    font-size: 11px;
+    color: #9B9B9B;
+    vertical-align: 2px;
+}
+
+.bottom i {
+    margin-left: 12px;
+    font-size: 16px;
+}
+
+.bottom .iconfont:nth-of-type(1) {
+    color: #34950E;
+}
+
+.bottom .iconfont:nth-of-type(2) {
+    color: #EA5D5C;
+    font-size: 18px;
+    vertical-align: -1px;
+}
+
+/* 二维码登录 login-code */
+.login-code .title {
+    border-bottom: 1px solid #ECECEC;
+    color: #333;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+}
+
+.login-code .code,.login-code .code img {
+    width: 170px;
+    height: 170px;
+}
+
+.login-code .code {
+    margin: 20px auto 0 auto;
+    position: relative;
+    width: 170px;
+    height: 170px;
+}
+
+.login-code .layer:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: .9;
+    background: #fff;
+    /* background-color:rgba(255,255,255,.8); */
+}
+
+.login-code .layer span,.login-code .layer a {
+    position: absolute;
+    z-index: 1;
+    left:0;
+    right:0;
+    text-align: center;
+}
+
+.login-code .layer span {
+    margin:50px auto 10px;
+    color:#000;
+    font-size:15px;
+}
+.login-code .layer a{
+    box-sizing:border-box;
+    width:86px;
+    height:26px;
+    font-size:14px;
+    line-height: 17px;
+    margin:85px auto 0 auto;
+    color:#fff;
+    padding:5px 15px;
+    background-color:rgba(66,189,86,.5);
+    border-radius:3px;
+    cursor:pointer;
+}
+
+.login-code .code-txt {
+    width:240px;
+    /* display:inline-block; */
+    margin: 10px auto 0 auto;
+    padding: 3px 5px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .08);
+    border-radius: 12px;
+}
+
+/* 顶部切换 top-change */
+.change .icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.change .icon.icon-code {
+    background: url(../img/switch-top-code.png) no-repeat left top/contain;
+}
+
+.change .icon.icon-logo {
+    background: url(../img/switch-top-logo.png) no-repeat left top/contain;
+}
+
+.change .icon:hover::after {
+    position: absolute;
+    top: 1px;
+    left: -100px;
+    display: block;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid rgb(66, 189, 86, .3);
+    color: #666;
+    background: #f5faf9;
+    padding: 0 5px;
+    border-radius: 4px;
+}
+
+.change .icon-code:hover::after {
+    left: -70px;
+    content: '扫码登录';
+}
+
+.change .icon-logo:hover::after {
+    content: '短信登录/注册';
+}
